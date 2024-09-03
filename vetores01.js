@@ -1,44 +1,45 @@
-//  Crie um algoritmo que leia um vetor de 5 números inteiros mostre-os
-
-//let numerosvetores = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-
-
-let numerosvetores = [];
-let mensagem = "";
-
-for (let i = 0;i < 5; i+= 1){
-    
-    numerosvetores.push (prompt("Informe número inteiro"));
-}
-    for (let i = 0; i < numerosvetores.length; i ++) 
-        {
-    mensagem += numerosvetores[i] + ",";
-  
-    }
-    alert(mensagem);
-
-
-
-
-
-
-
-
-
-
-
-
-// codigo abaixo é uma versão mais facil 
-
-/*numerosvetores [0] = prompt ("Informe o 1 número");
-numerosvetores [1] = prompt ("Informe o 2 número");
-numerosvetores [2] = prompt ("Informe o 3 número");
-numerosvetores [3] = prompt ("Informe o 4 número");
-numerosvetores [4] = prompt ("Informe o 5 número");
+let num = [];
+// leitura dos numeros nos espaços
+num[0] = prompt("Informe o 1º Numero");
+num[1] = prompt("Informe o 2º Numero");
+num[2] = prompt("Informe o 3º Numero");
+num[3] = prompt("Informe o 4º Numero");
+num[4] = prompt("Informe o 5º Numero");
 
 let mensagem =
+    `${num[0]}, ${num[1]}, ${num[2]}, ${num[3]} e ${num[4]} `;
 
-`${numerosvetores[0]}, ${numerosvetores [1]}, ${numerosvetores[2]}, ${numerosvetores[3]}, ${numerosvetores[4]}`;
+let mensagem2 =
+    num[0] + ", " + num[1] + ", " +
+    num[2] + ", " + num[3] + " e " + num[4];
 
-alert(mensagem);*/
+alert(mensagem);
 
+//alert(mensagem2);
+
+/* Outro modelo abaixo 
+
+let num = [];
+let mensagem = "";
+let numerostr = "";
+// leitura dos numeros nos espaços
+for (let i = 0; i < 5; i += 1) {
+    numerostr = prompt("Informe um número:");
+    num.push(numerostr);
+}
+
+for (let i = 0; i < num.length; i++) {
+
+    // O total de Elementos - 1 equivale a ultima posição do vetor.
+    // Ex: 5 valores no vetor, vai de 0 a 4 posições [0,1,2,3,4]. 
+    // O objetivo é inserir o ponto final no ultimo valor no texto.
+    let ultimaPosicao = (num.length - 1); 
+    
+    if(i == ultimaPosicao)
+        mensagem += num[i] + ".";
+    else
+        mensagem += num[i] + ", ";    
+}
+alert(mensagem);
+
+*/
