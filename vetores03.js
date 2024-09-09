@@ -1,35 +1,37 @@
-function isConsonant(letter) {
-    const vowels = 'aeiouAEIOU';
-    return letter.length === 1 && !vowels.includes(letter);
+let letras = [];
+contador = 0;
+mensagem = "";
+
+
+// leitura de uma letra no vetor de letras
+
+for (let i = 0; i < 10; i++) {
+    let letra = prompt("Informe uma letra: ");
+    letras.push(letra);
+}
+for (let j = 0; j < letras.length; j++) {
+    
+  // converte o texto para maiuscula   
+
+let letra = letras[j].toUpperCase();
+
+//
+    let temA = (letra == "A"); // true ou false
+    let temE = (letra == "E"); // true ou false
+    let temI = (letra == "I"); // true ou false
+    let temO = (letra == "O"); // true ou false
+    let temU = (letra == "U"); // true ou false
+
+    if ((temA  || temE  || temI  || temO  || temU) == false) {
+  
+    contador+= 1;
+
+    mensagem += letra + "\n";
+
 }
 
-function countConsonants(letters) {
-    let consonants = [];
-    let count = 0;
-
-    for (let i = 0; i < letters.length; i++) {
-        let letter = letters[i].trim(); // Remove espaços em branco
-        if (isConsonant(letter)) {
-            consonants.push(letter);
-            count++;
-        } else if (letter.length !== 1) {
-            return 'Por favor, insira apenas letras individuais.';
-        }
-    }
-
-    return `Número de consoantes: ${count}. Consoantes: ${consonants.join(', ')}`;
 }
 
-function getInput() {
-    let input = prompt('Digite 10 letras separadas por vírgulas:');
-    let letters = input.split(',').map(letter => letter.trim());
 
-    if (letters.length !== 10) {
-        alert('Por favor, insira exatamente 10 letras.');
-    } else {
-        alert(countConsonants(letters));
-    }
-}
+alert(mensagem + " \n" + " Teve " + contador + " Consoantes !");
 
-// Chama a função para iniciar o processo
-getInput();

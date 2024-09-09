@@ -1,4 +1,4 @@
-let num = [];
+/*let num = [];
 // leitura dos numeros nos espaços
 num[0] = prompt("Informe o 1º Numero");
 num[1] = prompt("Informe o 2º Numero");
@@ -13,11 +13,11 @@ let mensagem2 =
     num[0] + ", " + num[1] + ", " +
     num[2] + ", " + num[3] + " e " + num[4];
 
-alert(mensagem);
+alert(mensagem);*/
 
 //alert(mensagem2);
 
-/* Outro modelo abaixo 
+ //Outro modelo abaixo 
 
 let num = [];
 let mensagem = "";
@@ -41,5 +41,3 @@ for (let i = 0; i < num.length; i++) {
         mensagem += num[i] + ", ";    
 }
 alert(mensagem);
-
-*/
