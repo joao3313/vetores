@@ -6,6 +6,10 @@ function Nome(nome) {
 }
 
 // Função para validar a matrícula
+
+// ^[0-9]{8}$: ^ indica o início da string. [0-9] corresponde a qualquer dígito de 0 a 9.
+// {8} indica que deve haver exatamente 8 dígitos. $ indica o final da string.
+
 function Matricula(matricula) {
     return /^[0-9]{8}$/.test(matricula); // A matrícula deve ter exatamente 8 dígitos numéricos
 }
