@@ -2,7 +2,7 @@ let alunos = []; // Lista de alunos
 
 // Função para validar o nome completo
 function Nome(nome) {
-    return nome.trim().split(" ").length > 1;
+    return nome.trim().split(" ").length > 2;
 }
 
 // Função para validar a matrícula
@@ -81,9 +81,9 @@ function mostrarAlunos() {
     let tabela = "<table><tr><th> Nome </th><th> Matrícula </th><th> Matéria </th><th> Notas e Média </th></tr>";
     alunos.forEach(aluno => {
         tabela += `<tr>
-            <td>${aluno.nome}</td>
-            <td>${aluno.matricula}</td>
-            <td>${aluno.materia}</td>
+            <td> ${aluno.nome} </td>
+            <td> ${aluno.matricula} </td>
+            <td> ${aluno.materia} </td>
             <td>N1: ${aluno.nota1.toFixed(2)} / N2: ${aluno.nota2.toFixed(2)} / N3: ${aluno.nota3.toFixed(2)} / Média: ${aluno.media} </td>
         </tr>`;
     });
